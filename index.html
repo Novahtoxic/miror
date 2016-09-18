@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="sv">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+
+
+	<meta charset="utf-8">
+	<title>Magic Mirror</title>
+	<meta name="description" content="The Magic Mirror">
+	<meta http-equiv="refresh" content="1800" /> <!-- Updates the whole page every 30 minutes (each 1800 second) -->
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+</head>
+
+		<script language="JavaScript"> <!-- Getting the current date and time and updates them every second -->
+			setInterval(function() { 
+	
+				var currentTime = new Date ( );
+				var currentHours = currentTime.getHours ( );   
+				var currentMinutes = currentTime.getMinutes ( );
+				var currentMinutesleadingzero = currentMinutes > 9 ? currentMinutes : '0' + currentMinutes; // If the number is 9 or below we add a 0 before the number.
+				var currentDate = currentTime.getDate ( );
+	
+					var weekday = new Array(7);
+					weekday[0] = "Monday";
+					weekday[1] = "Tusday";
+					weekday[2] = "Wednesday";
+					weekday[3] = "Tursday";
+					weekday[4] = "Friday";
+					weekday[5] = "Saterday";
+					weekday[6] = "Sunday";
+				var currentDay = weekday[currentTime.getDay()]; 
+	
+					var actualmonth = new Array(12);
+					actualmonth[0] = "January";
+					actualmonth[1] = "February";
+					actualmonth[2] = "March";
+					actualmonth[3] = "April";
+					actualmonth[4] = "May";
+					actualmonth[5] = "June";
+					actualmonth[6] = "July";
+					actualmonth[7] = "August";
+					actualmonth[8] = "September";
+					actualmonth[9] = "htoctober";
+					actualmonth[10] = "November";
+					actualmonth[11] = "December";
+				var currentMonth = actualmonth[currentTime.getMonth ()];
+
+    var currentTimeString = "<h1>" + currentHours + ":" + currentMinutesleadingzero + "</h1><h2>" + currentDay + " " + currentDate + " " + currentMonth + "</h2>";
+    document.getElementById("clock").innerHTML = currentTimeString;
+}, 1000);
+
+
+	</script>
+	
+	
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="upper-left">
+		<div id="clock"></div> <!-- Including the date/time-script -->
+	</div>
+	<div id="upper-right">
+		<div id="bottom">
+		<script>
+
+//Time of day message script- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+var Digital=new Date()
+var hours=Digital.getHours()
+
+//Configure message below to your own.
+if (hours>=5&&hours<=11) //MESSAGE FOR MORNING
+document.write('<b>Be Ready By 7:15</b>')
+else if (hours==12) //MESSAGE FOR NOON
+document.write('Get Homework Done</b>')
+else if (hours>=13&&hours<=17) //MESSAGE FOR AFTERNOON
+document.write('<b>Good afternoon, and thanks for visiting.</b>')
+else if (hours>=18&&hours<=20) //MESSAGE FOR EVENING (6pm-8pm)
+document.write('<b>Go to bed by 10 to be ready for school.')
+else //MESSAGE FOR LATE NIGHT, EARLY MORNING (12pm-4am)
+document.write('<b>Go to bed by 10 to be ready for school.')
+
+</script>
+	</div>
+		
+		<!-- start feedwind code --><script type="text/javascript">document.write('\x3Cscript type="text/javascript" src="' + ('https:' == document.location.protocol ? 'https://' : 'http://') + 'feed.mikle.com/js/rssmikle.js">\x3C/script>');</script><script type="text/javascript">(function() {var params = {rssmikle_url: "http://feeds.foxnews.com/foxnews/latest",rssmikle_frame_width: "300",rssmikle_frame_height: "400",frame_height_by_article: "0",rssmikle_target: "_blank",rssmikle_font: "Arial, Helvetica, sans-serif",rssmikle_font_size: "12",rssmikle_border: "off",responsive: "off",rssmikle_css_url: "",text_align: "left",text_align2: "justify",corner: "off",scrollbar: "on",autoscroll: "off",scrolldirection: "up",scrollstep: "3",mcspeed: "20",sort: "Rnd",rssmikle_title: "on",rssmikle_title_sentence: "Fox News",rssmikle_title_link: "http://feeds.foxnews.com/foxnews/latest",rssmikle_title_bgcolor: "#0066FF",rssmikle_title_color: "#FFFFFF",rssmikle_title_bgimage: "",rssmikle_item_bgcolor: "#FFFFFF",rssmikle_item_bgimage: "",rssmikle_item_title_length: "55",rssmikle_item_title_color: "#0066FF",rssmikle_item_border_bottom: "on",rssmikle_item_description: "on",item_link: "on",rssmikle_item_description_length: "150",rssmikle_item_description_color: "#666666",rssmikle_item_date: "gl1",rssmikle_timezone: "Etc/GMT",datetime_format: "%b %e, %Y %l:%M %p",item_description_style: "text",item_thumbnail: "crop",item_thumbnail_selection: "auto",article_num: "15",rssmikle_item_podcast: "off",keyword_inc: "",keyword_exc: ""};feedwind_show_widget_iframe(params);})();</script><div style="font-size:10px; text-align:center; width:300px;">
+		
+	
+	</div>
+	
+
+</div>
+</body>
+</html>
