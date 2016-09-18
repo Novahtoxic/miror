@@ -17,13 +17,13 @@
 
 		<script language="JavaScript"> <!-- Getting the current date and time and updates them every second -->
 			setInterval(function() { 
-	currentTime.setHours(currentTime.getHours()+12);
+	
 				var currentTime = new Date ( );
 				var currentHours = currentTime.getHours ( );   
 				var currentMinutes = currentTime.getMinutes ( );
 				var currentMinutesleadingzero = currentMinutes > 9 ? currentMinutes : '0' + currentMinutes; // If the number is 9 or below we add a 0 before the number.
 				var currentDate = currentTime.getDate ( );
-	
+	 var currentTime.setHours(currentTime.getHours()+12);
 					var weekday = new Array(7);
 					weekday[1] = "Monday";
 					weekday[2] = "Tusday";
