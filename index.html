@@ -11,13 +11,10 @@
 	<title>Magic Mirror</title>
 	<meta name="description" content="The Magic Mirror">
 	<meta http-equiv="refresh" content="1800" /> <!-- Updates the whole page every 30 minutes (each 1800 second) -->
-	<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-</head>
-
 		<script language="JavaScript"> <!-- Getting the current date and time and updates them every second -->
 			setInterval(function() { 
-	
 				var currentTime = new Date ( );
 				var currentHours = currentTime.getHours ( );   
 				var currentMinutes = currentTime.getMinutes ( );
@@ -25,13 +22,13 @@
 				var currentDate = currentTime.getDate ( );
 	
 					var weekday = new Array(7);
-					weekday[0] = "Monday";
-					weekday[1] = "Tusday";
-					weekday[2] = "Wednesday";
-					weekday[3] = "Tursday";
-					weekday[4] = "Friday";
-					weekday[5] = "Saterday";
-					weekday[6] = "Sunday";
+					weekday[0] = "Sunday";
+					weekday[1] = "Monday";
+					weekday[2] = "Tuesday";
+					weekday[3] = "Wednesday";
+					weekday[4] = "Thursday";
+					weekday[5] = "Friday";
+					weekday[6] = "Saturday";
 				var currentDay = weekday[currentTime.getDay()]; 
 	
 					var actualmonth = new Array(12);
@@ -44,7 +41,7 @@
 					actualmonth[6] = "July";
 					actualmonth[7] = "August";
 					actualmonth[8] = "September";
-					actualmonth[9] = October";
+					actualmonth[9] = "October";
 					actualmonth[10] = "November";
 					actualmonth[11] = "December";
 				var currentMonth = actualmonth[currentTime.getMonth ()];
@@ -52,8 +49,6 @@
     var currentTimeString = "<h1>" + currentHours + ":" + currentMinutesleadingzero + "</h1><h2>" + currentDay + " " + currentDate + " " + currentMonth + "</h2>";
     document.getElementById("clock").innerHTML = currentTimeString;
 }, 1000);
-
-
 	</script>
 	
 	
